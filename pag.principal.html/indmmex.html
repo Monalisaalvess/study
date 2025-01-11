@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2C2F33; /* Fundo da página */
+}
+
+.sidebar {
+    width: 60px; /* Largura inicial do menu */
+    height: 100vh; /* Altura total */
+    background-color: #1A1D21; /* Fundo do menu */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinhar à esquerda */
+    padding-top: 10px;
+    position: fixed;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: width 0.3s ease; /* Transição suave ao expandir */
+    overflow: hidden; /* Esconde conteúdo extra ao recolher */
+}
+
+.sidebar.expanded {
+    width: 200px; /* Largura do menu expandido */
+}
+
+.hamburger {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px 10px 10px;
+    border-radius: 5px;
+}
+
+.menu-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #555;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.label {
+    color: white;
+    font-size: 16px;
+    opacity: 0; /* Esconde o texto inicialmente */
+    transition: opacity 0.3s ease; /* Transição suave ao aparecer */
+}
+
+.sidebar.expanded .label {
+    opacity: 1; /* Mostra o texto quando expandido */
+}
+
+
+/* styles.css */
+#calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+#display {
+  grid-column: span 4;
+  background: black;
+  color: white;
+  text-align: right;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+button#equals {
+  background: orange;
+  color: white;
+  grid-column: span 2;
+}
+
+
+
+
+    </style>
+</head>
+<body> <!--
+    <div class="sidebar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        
+        <div class="menu-item">
+            <span class="icon">🏠</span>
+            <span class="label">Home</span>
+        </div>
+        <div class="menu-item">
+            <span class="icon">⏰</span>
+            <span class="label">Relógio</span>
+        </div>
+        <div class="menu-item">
+            <span class="icon">📊</span>
+            <span class="label">Estatísticas</span>
+        </div>
+        <div class="menu-item">
+            <span class="icon">🍒</span>
+            <span class="label">Frutas</span>
+        </div>
+        <div class="menu-item">
+            <span class="icon">🌿</span>
+            <span class="label">Natureza</span>
+        </div>
+        <div class="menu-item">
+            <span class="icon">🚀</span>
+            <span class="label">Exploração</span>
+        </div>
+        <div class="menu-item">
+            <span class="icon">📚</span>
+            <span class="label">Biblioteca</span>
+        </div>
+    </div>
+
+-->
+
+<div id="calculator">
+    <div id="display">0</div>
+    <button id="clear">C</button>
+    <button id="backspace">←</button>
+    <button class="btn" data-value="%">%</button>
+    <button class="btn" data-value="/">÷</button>
+    <button class="btn" data-value="*">×</button>
+    <button class="btn" data-value="-">-</button>
+    <button class="btn" data-value="+">+</button>
+    <button class="btn" data-value="7">7</button>
+    <button class="btn" data-value="8">8</button>
+    <button class="btn" data-value="9">9</button>
+    <button class="btn" data-value="4">4</button>
+    <button class="btn" data-value="5">5</button>
+    <button class="btn" data-value="6">6</button>
+    <button class="btn" data-value="1">1</button>
+    <button class="btn" data-value="2">2</button>
+    <button class="btn" data-value="3">3</button>
+    <button class="btn" data-value="0">0</button>
+    <button class="btn" data-value=".">.</button>
+    <button id="sqrt">√</button>
+    <button id="power">xⁿ</button>
+    <button id="equals">=</button>
+  </div>
+  
+
+    <script src="script.js"></script>
+</body>
+</html>

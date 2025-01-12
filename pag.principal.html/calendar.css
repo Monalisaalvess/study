@@ -1,0 +1,39 @@
+.calendar{
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 30px yellow;
+    overflow: hidden;
+    width: 300px; color: aliceblue;
+    padding: 20px;
+}
+
+.bnt{
+    cursor: pointer;
+}
+#month-year {
+    font-weight: bold; font-size: 20px;
+}
+.weekdays, .days {
+    display: flex; flex-wrap: wrap;
+}
+.days {
+    height: 240px; 
+}
+.weekdays div, .days div{
+    width: 14.28%; border-radius: 5px;
+    text-align: center; padding: 10px 0;
+}
+.days div{
+    cursor: pointer; transition: background-color 0.3s;
+}
+.days div:hover {
+    background-color: red;
+    color: orange;
+}
+.days .today{
+    background-color: yellow;
+    color: green;
+}
+.days .fade{
+    
+}
